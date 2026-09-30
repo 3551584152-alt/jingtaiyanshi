@@ -1,0 +1,44 @@
+﻿智枢词训 GitHub 一键部署说明
+================================
+
+一、这个包包含什么
+- 完整 Vue 3 前端源代码
+- 完整 Django 6 后端源代码
+- 已构建的 GitHub Pages 静态演示网页
+- GitHub Actions 自动部署工作流
+- 项目计划书和答辩演示 PPT
+- 一键启动脚本、环境配置示例和 README
+
+二、上传到 GitHub
+1. 打开目标仓库：
+   https://github.com/3551584152-alt/douxuancdui-zhishucixun
+2. 将该文件夹内的全部文件上传到 main 分支。
+3. 也可以把整个文件夹内容先解压，再使用 GitHub Desktop 或 Git 推送。
+
+三、一键生成网页
+上传完成后，仓库会自动运行：
+- Actions 名称：Deploy GitHub Pages
+- 构建内容：frontend 目录
+- 发布目录：frontend/dist
+
+等待工作流完成后，访问：
+https://3551584152-alt.github.io/douxuancdui-zhishucixun/
+
+如果仓库没有自动启用 Pages：
+进入 Settings → Pages → Build and deployment，
+将 Source 设置为 GitHub Actions，然后重新运行 Deploy GitHub Pages 工作流。
+
+四、网页版说明
+GitHub Pages 是纯静态托管，不能运行 Python/Django 后端。
+因此静态网页版使用浏览器本地数据模拟后端接口，支持：
+背诵、练习、计划、统计、词典、错题本、顽固词本和四类智能体演示。
+
+需要真实数据库、登录账号和完整后端功能时，请在本机或云服务器运行 Django。
+
+五、本地运行完整项目
+Windows：双击“一键启动.bat”。
+手动运行：参考 README.md 的“快速开始”章节。
+
+注意：
+- 不要把 .env 密钥上传到 GitHub。
+- 仓库只提供 .env.example 模板。
